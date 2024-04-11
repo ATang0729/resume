@@ -1,6 +1,7 @@
 body { margin: 0;
        padding: 0;
-       background-color: #fff font-size: 12px;
+       background-color: #fff;
+       font-size: 12px;
        font-family: 'Source Sans Pro', sans-serif;
        -webkit-font-smoothing: subpixel-antialiased;
 }
@@ -68,6 +69,7 @@ a:hover {
 }
 .subsection { margin: 10px 0 5px }
 .desc { font-size: 16px; font-family: 'Source Sans Pro', sans-serif; color:#444;}
+
 .contact-info { font-size: 16px;
                 text-align: right;
 }
@@ -107,6 +109,7 @@ ul.skills li:last-child{
 .row:after { clear: both }
 .col { float: left }
 .col-right { float: right }
+.col-left { float: left }
 
 /*
  Page Rules
