@@ -66,33 +66,58 @@
       <h3>合合信息</h3>
       <div class="row subsection"><div class="emph col">AI 办公产品实习生（企业信息化部门）</div><div class="col-right light">上海 · 2026.07 - 至今</div></div>
       <div class="entry-tags"><span>AI 产品</span><span>Agent 工程</span><span>Agent Harness</span><span>Playwright</span><span>跨部门协同</span><span>GEO</span></div>
-      <ul class="desc">
-        <li><b>产品设计（风控数字员工）：</b>面向安全部门梳理 6 个具体场景，抽象业务规则、输入输出与异常处理逻辑；设计由 4 个 Skill 组成的 Agent 执行链路，覆盖信息抓取、风险识别、数据分析及结果交付。</li>
-        <li><b>场景落地（GEO 数字员工）：</b>围绕 GEO 优化“前期调研—拆稿铺稿—效果检测”全链路，梳理“任务解析—多平台采集—AI 评估—报告交付”流程，将数据抓取、指标分析与报告生成封装为可调用的生产级 Skill。</li>
-        <li><b>AI 应用工程（多平台采集）：</b>面向 GEO 与风控数字员工，使用 Python、Playwright 搭建豆包、DeepSeek、腾讯元宝等 AI 平台的自动化采集链路；通过 Browser Context、Storage State 管理登录态，并从定位兜底、交互控制、访问频控等维度落地 10+ 项稳定性策略。</li>
-        <li><b>平台能力建设与跨部门协同：</b>针对 Agent 沙箱仅支持 HTTP 协议、无法连接公司云数据库的问题，梳理数据访问链路与平台改造节点，协调平台开发、运维团队明确技术方案和排期，并持续推动需求优先级，最终支持数字员工访问企业内部业务数据。</li>
-        <li><b>Agent Harness 与效果调优：</b>针对跨 AI 助手批量采集单任务耗时 6–8 小时、长程运行易中断及平台反爬限制，将连续流程拆分为 15 分钟粒度任务，设计状态机、任务分片、状态持久化、断点续跑、失败恢复与反爬机制，保障生产稳定运行与结果交付；基于历史数据构建评测集并开展错误归因，迭代 Prompt、Skill 与工作流，将政策监控误报由日均 12 条降至 2 条以内。</li>
+      <ul class="desc project-list">
+        <li class="career-project" id="intsig-geo-agent-harness"><h4>GEO 数字员工：全流程设计、长任务执行与报告交付</h4>
+          <p>围绕 GEO 优化“前期调研—拆稿铺稿—效果检测”的业务链路，梳理“任务解析—多平台采集—AI 评估—报告交付”流程，将数据抓取、指标分析与报告生成封装为可调用的生产级 Skill。</p>
+          <p>针对跨 AI 助手批量采集单任务耗时 6–8 小时、长程运行易超时中断并从头重试、平台反爬限制及企微机器人消息阻塞无回应的问题，将连续流程拆分为 30 分钟粒度任务，设计状态机、任务分片、状态持久化、断点续跑、失败恢复与反爬等 Agent Harness 机制。</p>
+          <p>按确定性与语义不确定性划分执行环节：爬虫采集、状态机转移和定时触发由脚本实现，AI 仅承担需要语义解析的任务调度、语义理解与数据标注。围绕品牌提及率、首推率、品牌心智等 GEO 报告的交付要求，编写内容格式、主题设计与数据引用标准并由 <code>SKILL.md</code> 引用，在 <code>AGENTS.md</code> 中约束 Agent 角色、能力边界及自我介绍等行为。</p>
+          <p>使长程任务稳定运行并完成结果交付，用户可在任务过程中随时提问、查询进展并接收关键节点的进度通知，改善长任务期间的交互体验。</p>
+        </li>
+        <li class="career-project" id="intsig-policy-evaluation"><h4>风控数字员工：场景设计与政策监控评测</h4>
+          <p>面向安全部门梳理 6 个具体场景，抽象业务规则、输入输出与异常处理逻辑，设计由 4 个 Skill 组成的 Agent 执行链路，覆盖信息抓取、风险识别、数据分析及结果交付。</p>
+          <p>针对政策监控误报，基于历史数据构建评测集并开展错误归因，迭代 Prompt、Skill 与工作流，将误报由日均 12 条降至 2 条以内。</p>
+        </li>
+        <li class="career-project" id="intsig-shared-collection"><h4>多平台自动化采集（GEO 与风控共用）</h4>
+          <p>面向 GEO 与风控数字员工，使用 Python、Playwright 搭建豆包、DeepSeek、腾讯元宝等 AI 平台的自动化采集链路；通过 Browser Context、Storage State 管理登录态，并从定位兜底、交互控制、访问频控等维度落地 10+ 项稳定性策略。</p>
+        </li>
+        <li class="career-project" id="intsig-internal-data-access"><h4>数字员工企业内部数据接入</h4>
+          <p>针对 Agent 沙箱仅支持 HTTP 协议、无法连接公司云数据库的问题，梳理数据访问链路与平台改造节点，协调平台开发、运维团队明确技术方案和排期，并持续推动需求优先级，最终支持数字员工访问企业内部业务数据。</p>
+        </li>
       </ul>
     </div>
     <div class="section-text col-right experience-item">
       <h3>冰兰智能 · AI 客服 / 智能外呼</h3>
       <div class="row subsection"><div class="emph col">AI 产品实习生</div><div class="col-right light">深圳 · 2026.03 - 2026.06</div></div>
       <div class="entry-tags"><span>AI 语音交互</span><span>ASR / TTS</span><span>问题归因</span><span>PRD / 原型</span><span>Vibe Coding</span><span>数据自动化</span></div>
-      <ul class="desc">
-        <li><b>AI 语音交互评测与优化：</b>面向 ASR—大模型—TTS 架构的 AI 客服产品，通过听取通话 Case，区分并归因 ASR 识别错误、模型推理延迟、回复话术及语气不自然等问题；针对用户识别出机器人等场景，定位语气词、表达方式和模型异常输出，通过替换词配置及后处理规则过滤模型输出，优化对话自然度与拟人化体验。</li>
-        <li><b>产品设计（多租户外呼面板）：</b>针对人工跨系统导入线索出错率高的痛点，借助 Codex 与 Figma MCP 独立完成外呼面板原型和 4 份 PRD，定义租户隔离、状态流转、延时发起等核心逻辑；上线后线索录入出错率降低约 75%，总耗时降低 60%，已推广至 3 个业务线。</li>
-        <li><b>数据分析自动化：</b>拆解数据抓取与分析等高重复业务，通过 Vibe Coding 产出并迭代工具脚本，封装为可调用的 AI Skill 并接入团队 Agent，将人工报表处理由 1 小时以上压缩至 3 分钟。</li>
+      <ul class="desc project-list">
+        <li class="career-project" id="binglan-voice-evaluation"><h4>AI 客服对话体验评测与优化</h4>
+          <p>面向 ASR—大模型—TTS 架构的 AI 客服与智能外呼产品，针对用户识别出机器人、回复不自然等问题，通过听取真实通话 Case，区分并归因 ASR 识别错误、模型推理延迟、回复话术及语气问题；定位语气词、表达方式和模型异常输出，通过替换词配置及后处理规则过滤模型输出，优化对话自然度与拟人化体验。</p>
+        </li>
+        <li class="career-project" id="binglan-outbound-console"><h4>多租户外呼面板</h4>
+          <p>针对人工跨系统导入线索出错率高的痛点，借助 Codex 与 Figma MCP 独立完成外呼面板原型和 4 份 PRD，定义租户隔离、状态流转、延时发起等核心逻辑；上线后线索录入出错率降低约 75%，总耗时降低 60%，已推广至 3 个业务线。</p>
+        </li>
+        <li class="career-project" id="binglan-report-automation"><h4>业务报表自动化</h4>
+          <p>拆解数据抓取与分析等高重复业务，通过 Vibe Coding 产出并迭代工具脚本，封装为可调用的 AI Skill 并接入团队 Agent，将人工报表处理由 1 小时以上压缩至 3 分钟。</p>
+        </li>
       </ul>
     </div>
     <div class="section-text col-right experience-item">
       <h3>小鹏汇天 · 汇天航空航天</h3>
       <div class="row subsection"><div class="emph col">产品规划实习生</div><div class="col-right light">广州 · 2025.09 - 2026.03</div></div>
       <div class="entry-tags"><span>产品规划</span><span>用户研究</span><span>竞品分析</span><span>AI 场景</span></div>
-      <ul class="desc">
-        <li><b>用户洞察：</b>在产品上市前开展用户访谈，将模糊需求转化为 50+ 个硬件、营销及服务生态需求点，形成跨部门洞察报告；针对未收敛结论，制定后续研究方案和访谈大纲。</li>
-        <li><b>竞品研究：</b>通过桌面研究与业内专家访谈，分析国内外 5 大品类 63 个竞品的机型参数、研发进度与资源充足程度，划分主要与次要竞品，输出 1 份竞品分析报告。</li>
-        <li><b>AI 解决方案：</b>按 8 个维度评测 12 款 AI 产品，拆解部门高频 SOP，主持编写 3 份 DeepSeek、ChatGPT、Nano Banana Pro 等工具在洞察业务中的提效指南、使用案例与 Prompt 模板。</li>
-        <li><b>市场分析：</b>调研 12 种主要垂直应用场景，结合产品特性判断场景可行性，输出 1 份市场分析报告并设计 3 份面向不同专家群体的访谈方案。</li>
+      <ul class="desc project-list">
+        <li class="career-project" id="xpeng-user-research"><h4>上市前用户需求研究</h4>
+          <p>在产品上市前开展用户访谈，将模糊需求转化为 50+ 个硬件、营销及服务生态需求点，形成跨部门洞察报告；针对未收敛结论，制定后续研究方案和访谈大纲。</p>
+        </li>
+        <li class="career-project" id="xpeng-competitive-research"><h4>竞品格局与产品研究</h4>
+          <p>通过桌面研究与业内专家访谈，分析国内外 5 大品类 63 个竞品的机型参数、研发进度与资源充足程度，划分主要与次要竞品，输出 1 份竞品分析报告。</p>
+        </li>
+        <li class="career-project" id="xpeng-ai-insight-tools"><h4>洞察业务 AI 工具评测与应用指南</h4>
+          <p>按 8 个维度评测 12 款 AI 产品，拆解部门高频 SOP，主持编写 3 份 DeepSeek、ChatGPT、Nano Banana Pro 等工具在洞察业务中的提效指南、使用案例与 Prompt 模板。</p>
+        </li>
+        <li class="career-project" id="xpeng-market-scenarios"><h4>垂直应用场景与市场机会研究</h4>
+          <p>调研 12 种主要垂直应用场景，结合产品特性判断场景可行性，输出 1 份市场分析报告并设计 3 份面向不同专家群体的访谈方案。</p>
+        </li>
       </ul>
     </div>
     <div class="section-text col-right experience-item">
@@ -100,35 +125,64 @@
       <div class="row subsection"><div class="emph col">AI 产品实习生</div><div class="col-right light">上海 · 2025.03 - 2025.08</div></div>
       <div class="entry-tags"><span>Agent 产品</span><span>LLM 微调</span><span>模型评测</span><span>n8n</span><span>部署筹备</span></div>
       <div class="desc role-summary">端到端主导 2 款企业级 AI 产品从需求挖掘到内部平台上线，并作为公司标杆案例对外推广。</div>
-      <ul class="desc">
-        <li><b>需求澄清与技术选型：</b>对接业务负责人提出的“财报核对智能体”设想，通过多轮沟通拆解核对流程、规则边界及准确性、稳定性要求，识别自主 Agent 方案在确定性和可控性上的风险；完成 Agent 与 Workflow 方案对比，推动采用 n8n 与多模态大模型构建可控工作流。</li>
-        <li><b>Agent 产品与开发：</b>访谈挖掘财务审核痛点，独立完成支持 5 种发票的识别 Agent 从需求定义、产品规划、技术选型、界面设计到上线的全流程；基于 ReAct 设计工具调用逻辑，综合识别准确率达 90%+。</li>
-        <li><b>工作流与 API 工程化：</b>本地部署 n8n，接入多模态大模型 API，重构财报核对、存单识别等高精度业务 SOP，编排 20+ 节点工作流；约束模型结构化输出并完成字段解析、数据清洗、规则校验与异常分支处理，将 Python 脚本封装为本地 API 服务供工作流调用，使单次处理时间由 3 分钟缩短至 7 秒，效率提升约 30 倍。</li>
-        <li><b>LLM 微调：</b>面向非标资产负债表数据标准化场景，合成 11,000+ 条训练数据，设计合规性、格式完备性与逻辑一致性 3 类奖励函数；通过 SFT 与基于 GRPO 的强化学习微调，将任务准确率从低于 10% 提升至 85%+。</li>
-        <li><b>Prompt 评测调优：</b>面向多源异构表格检索，采用控制变量法并改进 Python 数据处理算法，持续调优提示词、验证实验假设，输出 6 份评测报告。</li>
-        <li><b>部署筹备：</b>快速学习大模型本地部署的资源与服务器需求，完成市场调研、报价梳理及服务器采购洽谈。</li>
+      <ul class="desc project-list">
+        <li class="career-project" id="rongcheng-financial-workflows"><h4>财报核对工作流与存单识别自动化</h4>
+          <p>对接业务负责人提出的“财报核对智能体”设想，通过多轮沟通拆解核对流程、规则边界及准确性、稳定性要求，识别自主 Agent 方案在确定性和可控性上的风险；完成 Agent 与 Workflow 方案对比，推动采用 n8n 与多模态大模型构建可控工作流。</p>
+          <p>本地部署 n8n，接入多模态大模型 API，重构财报核对、存单识别等高精度业务 SOP，编排 20+ 节点工作流；通过硬性 JSON 格式校验器与反馈机制约束 AI 输出，并完成字段解析、规则校验与异常分支处理，将 Python 脚本封装为本地 API 服务供工作流调用，使单次处理时间由 3 分钟缩短至 7 秒，效率提升约 30 倍。</p>
+        </li>
+        <li class="career-project" id="rongcheng-invoice-agent"><h4>多票种发票识别 Agent</h4>
+          <p>访谈挖掘财务审核痛点，独立完成支持 5 种发票的识别 Agent 从需求定义、产品规划、技术选型、界面设计到上线的全流程；基于 ReAct 设计工具调用逻辑，综合识别准确率达 90%+。</p>
+        </li>
+        <li class="career-project" id="rongcheng-balance-sheet-normalization"><h4>非标资产负债表标准化（后训练优化）</h4>
+          <p>在有限资源与私有化部署的硬性约束下，通过试验发现小尺寸模型难以掌握复杂标准化规则，尤其易误判会计科目的借贷方向，导致数值错误、表格结构不符合规范，任务准确率不足 10%。</p>
+          <p>针对上述典型难例设计合成样本，构建 11,000+ 条训练数据；对样本开展数据格式与会计规则逻辑校验，筛除不合格样本，防止错误数据进入训练。</p>
+          <p>参考金融推理模型 <a href="https://arxiv.org/abs/2503.16252">Fin-R1</a> 与 <a href="https://arxiv.org/abs/2501.15383">Qwen2.5-1M 技术报告</a>设计后训练方案：以 SFT 学习示例中的推理与输出模式，再以合规性、格式完备性、逻辑一致性 3 类奖励函数驱动 GRPO 强化学习微调，以提升规则运用与泛化能力为目标。</p>
+          <p>围绕数据格式与数值结果构建 6 维评测体系，结合错误归因迭代数据与模型方案，最终将任务准确率提升至 85%+。</p>
+        </li>
+        <li class="career-project" id="rongcheng-table-retrieval"><h4>多源异构表格检索评测</h4>
+          <p>面向多源异构表格检索，采用控制变量法并改进 Python 数据处理算法，持续调优提示词、验证实验假设，输出 6 份评测报告。</p>
+        </li>
+        <li class="career-project" id="rongcheng-deployment-preparation"><h4>大模型本地部署资源筹备</h4>
+          <p>快速学习大模型本地部署的资源与服务器需求，完成市场调研、报价梳理及服务器采购洽谈。</p>
+        </li>
       </ul>
     </div>
     <div class="section-text col-right experience-item">
       <h3>HAKUHODO 上海博报堂广告有限公司</h3>
       <div class="row subsection"><div class="emph col">数据营销企划实习生</div><div class="col-right light">上海 · 2023.12 - 2024.05</div></div>
       <div class="entry-tags"><span>技术运营</span><span>市场洞察</span><span>数据营销</span><span>AIGC</span></div>
-      <ul class="desc">
-        <li><b>市场洞察：</b>参与自由点、莉捷、肌肤之钥等美妆项目，借助天猫 TMIC、抖音巨量引擎等平台完成需求洞察、人群画像、竞品分析与词云可视化。</li>
-        <li><b>AI 资讯与工具运营：</b>跟踪 AI 前沿资讯，测试相关工具并沉淀使用体验，定期向跨部门成员分享。</li>
-        <li><b>数据运营：</b>建立天猫、抖音美容护肤卖点词坐标矩阵，从功效、成分等维度分析珂润产品的用户关注点与发展潜力，提出产品改进建议。</li>
-        <li><b>AIGC 内容生产：</b>使用 ChatGPT 与 Midjourney 协助生成广告文案与样版图片，配合整理营销领域语料库。</li>
+      <ul class="desc project-list">
+        <li class="career-project" id="hakuhodo-brand-research"><h4>品牌需求与人群洞察（自由点、莉捷、肌肤之钥等）</h4>
+          <p>参与自由点、莉捷、肌肤之钥等美妆项目，借助天猫 TMIC、抖音巨量引擎等平台完成需求洞察、人群画像、竞品分析与词云可视化。</p>
+        </li>
+        <li class="career-project" id="hakuhodo-ai-sharing"><h4>AI 资讯与工具分享</h4>
+          <p>跟踪 AI 前沿资讯，测试相关工具并沉淀使用体验，定期向跨部门成员分享。</p>
+        </li>
+        <li class="career-project" id="hakuhodo-curel-research"><h4>珂润产品卖点与用户需求分析</h4>
+          <p>建立天猫、抖音美容护肤卖点词坐标矩阵，从功效、成分等维度分析珂润产品的用户关注点与发展潜力，提出产品改进建议。</p>
+        </li>
+        <li class="career-project" id="hakuhodo-aigc-content"><h4>营销 AIGC 内容与语料支持</h4>
+          <p>使用 ChatGPT 与 Midjourney 协助生成广告文案与样版图片，配合整理营销领域语料库。</p>
+        </li>
       </ul>
     </div>
     <div class="section-text col-right experience-item compact-item">
       <h3>Kantar 凯度中国 · 定性研究实习生</h3>
       <div class="row subsection"><div class="emph col">用户研究与战略</div><div class="col-right light">上海 · 2023.04 - 2023.11</div></div>
       <div class="entry-tags"><span>用户研究</span><span>行业研究</span><span>数据分析</span><span>供应商对接</span></div>
-      <ul class="desc">
-        <li><b>商务对接：</b>独立完成德国供应商背调，通过英文邮件沟通需求与价格，完成 3 家以上供应商比价分析。</li>
-        <li><b>行业研究：</b>单个项目收集整理 50+ 份行业研报，整合多维市场数据，运用 ChatGPT 挖掘消费趋势，输出 3 份分析简报。</li>
-        <li><b>调研执行：</b>参与康师傅、理想汽车、拳头游戏、微信视频号等项目的用户甄别、访谈问卷设计及 20+ 场线上线下用户访谈。</li>
-        <li><b>数据分析：</b>借助 AI 工具将数百页访谈笔录结构化，建模分析用户群流转关系，完成可视化并输出 4 份研究报告。</li>
+      <ul class="desc project-list">
+        <li class="career-project" id="kantar-supplier-research"><h4>德国供应商调研与比价</h4>
+          <p>独立完成德国供应商背调，通过英文邮件沟通需求与价格，完成 3 家以上供应商比价分析。</p>
+        </li>
+        <li class="career-project" id="kantar-industry-research"><h4>消费趋势与行业专题研究</h4>
+          <p>单个项目收集整理 50+ 份行业研报，整合多维市场数据，运用 ChatGPT 挖掘消费趋势，输出 3 份分析简报。</p>
+        </li>
+        <li class="career-project" id="kantar-user-interviews"><h4>品牌定性研究与用户访谈</h4>
+          <p>参与康师傅、理想汽车、拳头游戏、微信视频号等项目的用户甄别、访谈问卷设计及 20+ 场线上线下用户访谈。</p>
+        </li>
+        <li class="career-project" id="kantar-transcript-analysis"><h4>访谈语料结构化与用户群流转分析</h4>
+          <p>借助 AI 工具将数百页访谈笔录结构化，建模分析用户群流转关系，完成可视化并输出 4 份研究报告。</p>
+        </li>
       </ul>
     </div>
   </section>
@@ -139,43 +193,60 @@
       <h3>机智流 AI 开源社区</h3>
       <div class="row subsection"><div class="emph col">联合创始人</div><div class="col-right light">2024.03 - 至今</div></div>
       <div class="entry-tags"><span>技术运营</span><span>内容增长</span><span>数据分析</span><span>商务合作</span></div>
-      <ul class="desc">
-        <li><b>渠道与社群运营：</b>主管微信公众号、知乎、小红书等多渠道运营，运营 3.5 万+粉丝账号及 5,000+ 人社群，账号曾获评国内 AI 自媒体 Top30。</li>
-        <li><b>开源生态追踪与内容策划：</b>持续跟踪智能体、具身智能等领域的 AI 论文、GitHub 开源项目及模型与开发工具更新，结合技术价值、社区热度和开发者需求筛选论文解读与技术内容选题。</li>
-        <li><b>内容创作：</b>个人撰写 10+ 篇文章，累计阅读量超 6 万；代表文章分别获得<a href="https://mp.weixin.qq.com/s/R7m80kUKxb2k_AQLjPF5NQ">1.6 万</a>及<a href="https://mp.weixin.qq.com/s/jMSw3ZjMWFb1CSlvLbwCTQ">6,000+ 阅读</a>。</li>
-        <li><b>AI 内容工作流：</b>拆解从选题到成稿的内容生产链路，基于 Coze 构建自动化 Workflow；结合用户反馈开展多轮 Prompt 实验，降低内容“AI 味”，将写稿效率提升 2 倍；将成熟逻辑解耦为标准 AI Skill / Agent，降低维护与使用门槛。</li>
-        <li><b>双端协同工作台（迭代中）：</b>针对信息采集、内容生产、自动排版等工作流分散、团队协作链路割裂的问题，正在整合现有工作流并设计开发移动端与 Web 端协同的一站式工作台，计划统一承载任务、内容与流程管理；目前仍处于迭代阶段，尚未正式交付。</li>
-        <li><b>技术活动运营：</b>组织线上学术分享“新春 AI 茶话会”，负责预热、赞助沟通、嘉宾邀约及直播运营；在账号粉丝刚破 1 万时实现 5,000+ 观看，沉淀 700+ 私域用户。</li>
-        <li><b>数据分析：</b>通过后台数据监控、社群管理与粉丝类型标注，完成文章表现与用户偏好分析，驱动选题策略迭代。</li>
-        <li><b>商务合作：</b>负责对外商务洽谈，促成与 InfoQ、亚马逊云科技等企业的合作。</li>
+      <ul class="desc project-list">
+        <li class="career-project" id="jizhiliu-content-community"><h4>AI 技术内容与多渠道社区运营</h4>
+          <p>面向 AI 技术内容与开发者社区，主管微信公众号、知乎、小红书等多渠道运营。持续跟踪智能体、具身智能领域的 AI 论文、GitHub 开源项目及模型与开发工具更新，结合技术价值、社区热度和开发者需求筛选论文解读与技术内容选题。</p>
+          <p>通过后台数据监控、社群管理与粉丝类型标注，分析文章表现和用户偏好，驱动选题策略迭代。个人撰写 10+ 篇文章，累计阅读量超 6 万；代表文章分别获得<a href="https://mp.weixin.qq.com/s/R7m80kUKxb2k_AQLjPF5NQ">1.6 万</a>及<a href="https://mp.weixin.qq.com/s/jMSw3ZjMWFb1CSlvLbwCTQ">6,000+ 阅读</a>。</p>
+          <p>运营 3.5 万+粉丝账号及 5,000+ 人社群，账号曾获评国内 AI 自媒体 Top30。</p>
+        </li>
+        <li class="career-project" id="jizhiliu-content-workflow"><h4>AI 内容生产工作流</h4>
+          <p>拆解从选题到成稿的内容生产链路，基于 Coze 构建自动化 Workflow；结合用户反馈开展多轮 Prompt 实验，降低内容“AI 味”，将写稿效率提升 2 倍；将成熟逻辑解耦为标准 AI Skill / Agent，降低维护与使用门槛。</p>
+        </li>
+        <li class="career-project" id="jizhiliu-workspace"><h4>双端协同工作台（迭代中）</h4>
+          <p>针对信息采集、内容生产、自动排版等工作流分散、团队协作链路割裂的问题，正在整合现有工作流并设计开发移动端与 Web 端协同的一站式工作台，计划统一承载任务、内容与流程管理；目前仍处于迭代阶段，尚未正式交付。</p>
+        </li>
+        <li class="career-project" id="jizhiliu-ai-tea-party"><h4>新春 AI 茶话会</h4>
+          <p>组织线上学术分享“新春 AI 茶话会”，负责预热、赞助沟通、嘉宾邀约及直播运营；在账号粉丝刚破 1 万时实现 5,000+ 观看，沉淀 700+ 私域用户。</p>
+        </li>
+        <li class="career-project" id="jizhiliu-partnerships"><h4>技术企业合作拓展</h4>
+          <p>负责对外商务洽谈，促成与 InfoQ、亚马逊云科技等企业的合作。</p>
+        </li>
       </ul>
     </div>
     <div class="section-text col-right experience-item">
       <h3>书生·浦语（InternLM）大模型实战营</h3>
       <div class="row subsection"><div class="emph col">优秀助教</div><div class="col-right light">2024.04 - 2024.05</div></div>
       <div class="entry-tags"><span>开发者支持</span><span>社群运营</span><span>大模型部署</span><span>DeepSpeed</span><span>流程自动化</span></div>
-      <ul class="desc">
-        <li><b>开发者支持：</b>面向 3,000+ 学员提供技术支持，集中处理模型部署、微调与 OOM 问题；针对 GPU 显存不足，通过问题复现与技术协同，提供 DeepSpeed ZeRO CPU Offload、降低 KV Cache 比例等可执行方案。</li>
-        <li><b>结营运营自动化：</b>使用飞书工具与脚本完成作业状态汇总、完课核验和结营证书发放，支撑大规模线上互动与结营流程稳定交付。</li>
+      <ul class="desc project-list">
+        <li class="career-project" id="internlm-bootcamp-support"><h4>大模型实战营：开发者支持与结营交付</h4>
+          <p>面向 3,000+ 学员提供技术支持，集中处理模型部署、微调与 OOM 问题；针对 GPU 显存不足，通过问题复现与技术协同，提供 DeepSpeed ZeRO CPU Offload、降低 KV Cache 比例等可执行方案。</p>
+          <p>使用飞书工具与脚本完成作业状态汇总、完课核验和结营证书发放，支撑大规模线上互动与结营流程稳定交付。</p>
+        </li>
       </ul>
     </div>
     <div class="section-text col-right experience-item">
       <h3>筑梦者计划 · 公益创业项目</h3>
       <div class="row subsection"><div class="emph col">联合创始人 · 前端与 IT 负责人</div><div class="col-right light">2022.12 - 2023.11（旧简历最后确认）</div></div>
       <div class="entry-tags"><span>公益创业</span><span>社会创新</span><span>前端开发</span><span>Git</span><span>产品规划</span></div>
-      <ul class="desc">
-        <li><b>项目定位：</b>联合发起面向唐氏综合征、智力障碍儿童的公益项目，以社会关怀、平等对待与快乐成长为倡议方向，探索通过数字化渠道扩大公益影响。</li>
-        <li><b>数字化阵地：</b>负责前端及 IT 事务，使用 HTML、CSS 与 JavaScript 创建并维护<a href="https://www.dream-workers.cc/">组织官网</a>，通过 Git 进行云端与本地双重代码备份。</li>
-        <li><b>产品规划：</b>规划线上互动游戏小程序，通过轻量互动提升公众对智力障碍儿童的关注及项目知名度；截至 2023.11，该事项处于规划阶段，尚无已交付证据。</li>
+      <ul class="desc project-list">
+        <li class="career-project" id="dreamworkers-website"><h4>公益项目官网建设与维护</h4>
+          <p>联合发起面向唐氏综合征、智力障碍儿童的公益项目，以社会关怀、平等对待与快乐成长为倡议方向，探索通过数字化渠道扩大公益影响。</p>
+          <p>负责前端及 IT 事务，使用 HTML、CSS 与 JavaScript 创建并维护<a href="https://www.dream-workers.cc/">组织官网</a>，通过 Git 进行云端与本地双重代码备份。</p>
+        </li>
+        <li class="career-project" id="dreamworkers-miniprogram"><h4>公益互动游戏小程序（规划中）</h4>
+          <p>规划线上互动游戏小程序，通过轻量互动提升公众对智力障碍儿童的关注及项目知名度；截至 2023.11，该事项处于规划阶段，尚无已交付证据。</p>
+        </li>
       </ul>
     </div>
     <div class="section-text col-right experience-item">
       <h3>OpenMMLab MMPose</h3>
       <div class="row subsection"><div class="emph col">开源贡献者 · <a href="https://github.com/open-mmlab/mmpose/pull/2201">PR #2201</a></div><div class="col-right light">2023.03 - 2023.04</div></div>
       <div class="entry-tags"><span>Git / GitHub</span><span>Pull Request</span><span>Code Review</span><span>CI</span><span>双语文档</span></div>
-      <ul class="desc">
-        <li><b>PR 交付：</b>独立完成并推动 PR 合并，为 MMPose 1.x 增加 DeepFashion2 数据集类、训练配置、预训练模型及日志，形成可复用训练方案。</li>
-        <li><b>开源协作：</b>根据 Maintainer Review 移除配置文件中的中文注释，补充 JSON 格式训练日志及预训练模型，并同步 <code>dev-1.x</code> 分支完成 CI 检查；编写中英文 Dataset Zoo 使用说明。</li>
+      <ul class="desc project-list">
+        <li class="career-project" id="mmpose-deepfashion2"><h4>DeepFashion2 数据集接入与开源交付</h4>
+          <p>为 MMPose 1.x 增加 DeepFashion2 数据集支持，独立完成数据集类、训练配置、预训练模型及日志，编写中英文 Dataset Zoo 使用说明，形成可复用训练方案。</p>
+          <p>根据 Maintainer Review 移除配置文件中的中文注释，补充 JSON 格式训练日志及预训练模型，并同步 <code>dev-1.x</code> 分支完成 CI 检查，推动 PR 合并。</p>
+        </li>
       </ul>
     </div>
   </section>
@@ -210,7 +281,7 @@
     <div class="section-text col-right project-item">
       <h3>酒店自助入住产品效果研究 · 上海市科创立项</h3>
       <div class="row subsection"><div class="emph col">项目负责人</div><div class="col-right light">2022.04 - 2023.05</div></div>
-      <div class="desc">采用情感分析与双重差分（DID）评估自助入住机对顾客满意度的影响及中介、调节机制；<a href="https://www.sciencedirect.com/science/article/pii/S0278431924001841">成果发表于 International Journal of Hospitality Management</a>。</div>
+      <div class="desc">采用情感分析与双重差分（DID）评估自助入住机对顾客满意度的影响及中介、调节机制；论文 <a href="https://www.sciencedirect.com/science/article/pii/S0278431924001841"><em>How does customer satisfaction change after hotels start using self-service kiosks?</em></a> 发表于 <em>International Journal of Hospitality Management</em>（JCR 一区、中科院一区 TOP 期刊）。</div>
     </div>
     <div class="section-text col-right project-item">
       <h3>计算机应用能力大赛 · 服装廓形识别</h3>
@@ -222,9 +293,11 @@
       <div class="row subsection"><div class="emph col">团队负责人 · 一等奖</div><div class="col-right light">2023.02</div></div>
       <div class="entry-tags"><span>小样本预测</span><span>LSTM / BPNN</span><span>聚类与分类</span><span>数学建模</span><span>论文写作</span></div>
       <div class="desc role-summary">围绕 Wordle 字谜游戏的数据分析与挖掘，负责团队统筹、数学建模、部分程序设计及论文撰写。</div>
-      <ul class="desc">
-        <li><b>小样本预测：</b>基于 300+ 条有限数据样本，采用 LSTM 预测每日玩家数量，并设计 VL-LSTM 缓解训练数据过少导致的欠拟合，模型准确率达 98.9%；结合语言学知识提取变量，使用 BP 神经网络预测不同尝试次数的玩家占比，准确率达 93.3%。</li>
-        <li><b>难度评价体系：</b>综合数学模型、GRA 与熵权法构建字谜客观及主观难度变量，依据统计特征使用 DBSCAN 聚类，再以 SVM 学习聚类特征并结合预测模型，实现每日字谜难度评价。</li>
+      <ul class="desc project-list">
+        <li class="career-project" id="mcm-wordle-modeling"><h4>Wordle 玩家预测与字谜难度评价</h4>
+          <p>基于 300+ 条有限数据样本，采用 LSTM 预测每日玩家数量，并设计 VL-LSTM 缓解训练数据过少导致的欠拟合，模型准确率达 98.9%；结合语言学知识提取变量，使用 BP 神经网络预测不同尝试次数的玩家占比，准确率达 93.3%。</p>
+          <p>综合数学模型、GRA 与熵权法构建字谜客观及主观难度变量，依据统计特征使用 DBSCAN 聚类，再以 SVM 学习聚类特征并结合预测模型，实现每日字谜难度评价。</p>
+        </li>
       </ul>
     </div>
   </section>
@@ -244,9 +317,9 @@
     <h2 class="col">专业能力</h2>
     <div class="section-text col-right skills-grid">
       <div><b>产品：</b>需求调研、用户访谈、竞品分析、PRD、原型、指标体系、GTM 支持</div>
-      <div><b>AI：</b>AI 语音交互、ASR / TTS、Agent / ReAct、AI Skill、Agent Harness、长任务状态机、RAG 基础认知、Prompt 工程、模型评测、n8n、Coze</div>
+      <div><b>AI：</b>AI 语音交互、ASR / TTS、Agent / ReAct、AI Skill、Agent Harness、长任务状态机、RAG 基础认知、Prompt 工程、模型评测、SFT / GRPO 后训练、n8n、Coze</div>
       <div><b>工程 / 开源：</b>Git / GitHub、Pull Request / Issue、Markdown、Linux、Python、DeepSpeed ZeRO、开发者文档</div>
-      <div><b>数据：</b>Python、SQL、MySQL、Tableau、SPSS、实验设计与数据可视化</div>
+      <div><b>数据：</b>Python、SQL、MySQL、Tableau、SPSS、实验设计与数据可视化、训练数据合成及格式与会计规则校验</div>
       <div><b>语言：</b>英语（CET-6）、葡萄牙语</div>
       <div><b>培训 / 认证：</b>书生浦语大模型实战营优秀学员与优秀助教；DBA 初级数据分析师；MARs 初级市场研究员</div>
     </div>
@@ -257,7 +330,7 @@
     <div class="section-text col-right skills-grid">
       <div>本科生国家奖学金 · 上海市优秀毕业生 · 优秀毕业论文</div>
       <div>美国大学生数学建模竞赛一等奖 · 计算机应用能力大赛省级二等奖</div>
-      <div>International Journal of Hospitality Management 论文 · OpenMMLab MMPose 开源贡献</div>
+      <div>International Journal of Hospitality Management 论文（JCR 一区、中科院一区 TOP 期刊） · OpenMMLab MMPose 开源贡献</div>
     </div>
   </section>
 </main>

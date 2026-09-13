@@ -66,33 +66,58 @@
       <h3>INTSIG Information</h3>
       <div class="row subsection"><div class="emph col">AI Office Product Intern, Enterprise IT</div><div class="col-right light">Shanghai · Jul 2026 - Present</div></div>
       <div class="entry-tags"><span>AI Products</span><span>Agent Engineering</span><span>Agent Harness</span><span>Playwright</span><span>Cross-Functional Collaboration</span><span>GEO</span></div>
-      <ul class="desc">
-        <li><b>Risk-control digital employee:</b> Defined business rules, inputs/outputs, and exception handling across six security-team scenarios; designed a four-skill agent chain spanning information retrieval, risk identification, data analysis, and result delivery.</li>
-        <li><b>GEO digital employee:</b> Mapped the end-to-end GEO workflow from research and content decomposition/distribution to performance monitoring. Productized task parsing, multi-platform collection, AI evaluation, KPI analysis, and report generation as callable production-grade skills.</li>
-        <li><b>AI application engineering and multi-platform collection:</b> Built automated collection pipelines for Doubao, DeepSeek, Tencent Yuanbao, and other AI platforms with Python and Playwright for GEO and risk-control digital employees. Managed authenticated sessions through Browser Context and Storage State, and implemented 10+ stability measures covering selector fallback, interaction control, and access throttling.</li>
-        <li><b>Platform capability and cross-functional delivery:</b> Addressed an agent sandbox that supported only HTTP and could not connect to the company's cloud database. Mapped the data-access path and required platform changes, aligned the technical approach and schedule with platform developers and operations, and continued driving prioritization until digital employees could access internal business data.</li>
-        <li><b>Agent harness and evaluation:</b> Addressed 6–8-hour multi-assistant collection jobs, frequent long-run interruptions, and platform anti-scraping constraints by splitting continuous execution into 15-minute tasks and designing task sharding, a state machine, persistent state, checkpoint resume, failure recovery, and anti-scraping mechanisms to support reliable production delivery. Built an evaluation set from historical data, performed error attribution, and iterated prompts, skills, and workflows to reduce policy-monitoring false positives from 12 per day to two or fewer.</li>
+      <ul class="desc project-list">
+        <li class="career-project" id="intsig-geo-agent-harness"><h4>GEO digital employee: workflow design, long-running execution, and reporting</h4>
+          <p>Mapped the GEO business lifecycle from research and content decomposition/distribution to performance monitoring, defining task parsing, multi-platform collection, AI evaluation, and report delivery. Packaged data collection, KPI analysis, and report generation as callable production-grade skills.</p>
+          <p>Addressed 6–8-hour multi-assistant collection jobs that timed out and restarted from scratch, platform anti-scraping constraints, and blocked or unanswered WeCom bot messages. Split continuous execution into 30-minute tasks and designed Agent Harness mechanisms including a state machine, task sharding, persistent state, checkpoint resume, failure recovery, and anti-scraping measures.</p>
+          <p>Separated deterministic execution from semantic decisions: scripts handled crawling, state-machine transitions, and scheduled triggers, while AI handled semantically dependent task routing, interpretation, and data labeling. For reports covering brand mention rate, first-recommendation rate, and brand mindshare, authored content-format, theme-design, and data-citation standards referenced from <code>SKILL.md</code>; defined agent roles, capability boundaries, and self-introduction behavior in <code>AGENTS.md</code>.</p>
+          <p>Enabled stable long-running execution and result delivery while allowing users to ask questions, check progress, and receive milestone notifications during a task, improving the interaction experience.</p>
+        </li>
+        <li class="career-project" id="intsig-policy-evaluation"><h4>Risk-control digital employee: scenario design and policy-monitoring evaluation</h4>
+          <p>Defined business rules, inputs/outputs, and exception handling across six security-team scenarios, designing a four-skill agent chain spanning information retrieval, risk identification, data analysis, and result delivery.</p>
+          <p>Addressed policy-monitoring false positives by building an evaluation set from historical data, performing error attribution, and iterating prompts, skills, and workflows; reduced false positives from 12 per day to two or fewer.</p>
+        </li>
+        <li class="career-project" id="intsig-shared-collection"><h4>Multi-platform collection shared by GEO and risk-control agents</h4>
+          <p>Built automated collection pipelines for Doubao, DeepSeek, Tencent Yuanbao, and other AI platforms with Python and Playwright for GEO and risk-control digital employees. Managed authenticated sessions through Browser Context and Storage State, and implemented 10+ stability measures covering selector fallback, interaction control, and access throttling.</p>
+        </li>
+        <li class="career-project" id="intsig-internal-data-access"><h4>Internal business-data access for digital employees</h4>
+          <p>Addressed an agent sandbox that supported only HTTP and could not connect to the company's cloud database. Mapped the data-access path and required platform changes, aligned the technical approach and schedule with platform developers and operations, and continued driving prioritization until digital employees could access internal business data.</p>
+        </li>
       </ul>
     </div>
     <div class="section-text col-right experience-item">
       <h3>Binglan Intelligent Technology · AI Customer Service / Outbound Calling</h3>
       <div class="row subsection"><div class="emph col">AI Product Intern</div><div class="col-right light">Shenzhen · Mar 2026 - Jun 2026</div></div>
       <div class="entry-tags"><span>AI Voice Interaction</span><span>ASR / TTS</span><span>Error Attribution</span><span>PRDs / Prototypes</span><span>Vibe Coding</span><span>Data Automation</span></div>
-      <ul class="desc">
-        <li><b>Voice interaction evaluation and optimization:</b> Reviewed call cases for an AI customer-service product built on an ASR–LLM–TTS architecture, attributing issues to ASR errors, model latency, and unnatural wording or tone. Addressed cases where users recognized the bot by configuring replacement terms and applying post-processing rules to filter model outputs and improve conversational naturalness.</li>
-        <li><b>Multi-tenant outbound-calling console:</b> Addressed error-prone cross-system lead imports by independently producing the console prototype and four PRDs with Codex and Figma MCP; defined tenant isolation, status transitions, and delayed initiation. After launch, lead-entry errors fell by approximately 75% and total processing time by 60%; the product was adopted by three business lines.</li>
-        <li><b>Automated data analysis:</b> Decomposed repetitive data collection and analysis tasks, iteratively built utility scripts through vibe coding, packaged them as callable AI skills, and integrated them into the team's agent—cutting manual report processing from over one hour to three minutes.</li>
+      <ul class="desc project-list">
+        <li class="career-project" id="binglan-voice-evaluation"><h4>AI customer-service conversation evaluation and improvement</h4>
+          <p>Addressed cases where users recognized the bot or found its responses unnatural in an ASR–LLM–TTS customer-service and outbound-calling product. Reviewed real call cases and attributed failures to ASR errors, model latency, wording, or tone; identified issues with conversational fillers, expressions, and abnormal model output, then configured replacement terms and post-processing rules to improve conversational naturalness and a more human-like experience.</p>
+        </li>
+        <li class="career-project" id="binglan-outbound-console"><h4>Multi-tenant outbound-calling console</h4>
+          <p>Addressed error-prone cross-system lead imports by independently producing the console prototype and four PRDs with Codex and Figma MCP; defined tenant isolation, status transitions, and delayed initiation. After launch, lead-entry errors fell by approximately 75% and total processing time by 60%; the product was adopted by three business lines.</p>
+        </li>
+        <li class="career-project" id="binglan-report-automation"><h4>Business-report automation</h4>
+          <p>Decomposed repetitive data collection and analysis tasks, iteratively built utility scripts through vibe coding, packaged them as callable AI skills, and integrated them into the team's agent—cutting manual report processing from over one hour to three minutes.</p>
+        </li>
       </ul>
     </div>
     <div class="section-text col-right experience-item">
       <h3>XPENG AEROHT</h3>
       <div class="row subsection"><div class="emph col">Product Planning Intern</div><div class="col-right light">Guangzhou · Sep 2025 - Mar 2026</div></div>
       <div class="entry-tags"><span>Product Planning</span><span>User Research</span><span>Competitive Analysis</span><span>AI Use Cases</span></div>
-      <ul class="desc">
-        <li><b>User insights:</b> Conducted pre-launch user interviews, translated ambiguous needs into 50+ hardware, marketing, and service-ecosystem requirements, and produced a cross-functional insight report; designed follow-up research and interview guides for unresolved findings.</li>
-        <li><b>Competitive research:</b> Analyzed specifications, R&amp;D progress, and resource readiness across 63 competitors in five domestic and international categories through desk research and expert interviews; delivered a tiered competitive landscape report.</li>
-        <li><b>AI solutions:</b> Evaluated 12 AI products across eight dimensions, mapped high-frequency department SOPs, and led three guides covering DeepSeek, ChatGPT, Nano Banana Pro, reusable use cases, and prompt templates for insight work.</li>
-        <li><b>Market analysis:</b> Assessed 12 major vertical application scenarios against product capabilities, produced one market-opportunity report, and designed three interview plans for distinct expert groups.</li>
+      <ul class="desc project-list">
+        <li class="career-project" id="xpeng-user-research"><h4>Pre-launch user-requirements research</h4>
+          <p>Conducted pre-launch user interviews, translated ambiguous needs into 50+ hardware, marketing, and service-ecosystem requirements, and produced a cross-functional insight report; designed follow-up research and interview guides for unresolved findings.</p>
+        </li>
+        <li class="career-project" id="xpeng-competitive-research"><h4>Competitive landscape and product research</h4>
+          <p>Analyzed specifications, R&amp;D progress, and resource readiness across 63 competitors in five domestic and international categories through desk research and expert interviews; delivered a tiered competitive landscape report.</p>
+        </li>
+        <li class="career-project" id="xpeng-ai-insight-tools"><h4>AI-tool evaluation and guides for insight work</h4>
+          <p>Evaluated 12 AI products across eight dimensions, mapped high-frequency department SOPs, and led three guides covering DeepSeek, ChatGPT, Nano Banana Pro, reusable use cases, and prompt templates for insight work.</p>
+        </li>
+        <li class="career-project" id="xpeng-market-scenarios"><h4>Vertical use-case and market-opportunity research</h4>
+          <p>Assessed 12 major vertical application scenarios against product capabilities, produced one market-opportunity report, and designed three interview plans for distinct expert groups.</p>
+        </li>
       </ul>
     </div>
     <div class="section-text col-right experience-item">
@@ -100,35 +125,64 @@
       <div class="row subsection"><div class="emph col">AI Product Intern</div><div class="col-right light">Shanghai · Mar 2025 - Aug 2025</div></div>
       <div class="entry-tags"><span>Agent Products</span><span>LLM Fine-Tuning</span><span>Model Evaluation</span><span>n8n</span><span>Deployment</span></div>
       <div class="desc role-summary">Led two enterprise AI products end to end, from discovery to launch on the internal platform; both were showcased externally as reference cases.</div>
-      <ul class="desc">
-        <li><b>Requirements clarification and technical selection:</b> Worked with the business owner on an initial "financial-statement checking agent" concept, using multiple discovery discussions to decompose the checking process, rule boundaries, and accuracy and stability requirements. Identified determinism and controllability risks in an autonomous-agent approach, compared agent and workflow architectures, and drove adoption of a controllable n8n and multimodal-LLM workflow.</li>
-        <li><b>Agent product and development:</b> Owned discovery, product planning, technical selection, UI design, and launch of a ReAct-based agent supporting five invoice types; designed tool-use logic and achieved 90%+ end-to-end recognition accuracy.</li>
-        <li><b>Workflow and API engineering:</b> Deployed n8n locally, integrated a multimodal-LLM API, and re-engineered SOPs for financial-statement checks and deposit-certificate recognition into a 20+ node workflow. Constrained structured model outputs; implemented field parsing, data cleaning, rule validation, and exception branches; and exposed Python scripts as local API services for workflow calls, reducing processing time from three minutes to seven seconds—approximately a 30× efficiency gain.</li>
-        <li><b>LLM fine-tuning:</b> Synthesized 11,000+ samples for non-standard balance-sheet normalization and designed three reward types covering compliance, format completeness, and logical consistency. Applied SFT and GRPO-based reinforcement learning to improve task accuracy from below 10% to 85%+.</li>
-        <li><b>Prompt evaluation:</b> Used controlled experiments and improved Python data-processing algorithms for heterogeneous-table retrieval; iteratively tested prompt hypotheses and delivered six evaluation reports.</li>
-        <li><b>Deployment preparation:</b> Researched resource and server requirements for local LLM deployment, compared market quotations, and supported server procurement negotiations.</li>
+      <ul class="desc project-list">
+        <li class="career-project" id="rongcheng-financial-workflows"><h4>Financial-statement checking workflows and deposit-certificate automation</h4>
+          <p>Worked with the business owner on an initial "financial-statement checking agent" concept, using multiple discovery discussions to decompose the checking process, rule boundaries, and accuracy and stability requirements. Identified determinism and controllability risks in an autonomous-agent approach, compared agent and workflow architectures, and drove adoption of a controllable n8n and multimodal-LLM workflow.</p>
+          <p>Deployed n8n locally, integrated a multimodal-LLM API, and re-engineered SOPs for financial-statement checks and deposit-certificate recognition into a 20+ node workflow. Constrained AI output through a strict JSON-format validator and feedback mechanism; implemented field parsing, rule validation, and exception branches; and exposed Python scripts as local API services for workflow calls, reducing processing time from three minutes to seven seconds—approximately a 30× efficiency gain.</p>
+        </li>
+        <li class="career-project" id="rongcheng-invoice-agent"><h4>Multi-type invoice-recognition agent</h4>
+          <p>Owned discovery, product planning, technical selection, UI design, and launch of a ReAct-based agent supporting five invoice types; designed tool-use logic and achieved 90%+ end-to-end recognition accuracy.</p>
+        </li>
+        <li class="career-project" id="rongcheng-balance-sheet-normalization"><h4>Non-standard balance-sheet normalization: post-training optimization</h4>
+          <p> Under hard constraints requiring private deployment with limited resources, experiments showed that smaller models struggled with complex normalization rules, particularly debit/credit directions for different accounting categories. This caused numerical errors and noncompliant table structures, with task accuracy below 10%.</p>
+          <p>Designed synthetic samples targeting these difficult representative cases and built 11,000+ training samples. Validated data formats and accounting-rule logic, filtering out noncompliant samples to keep erroneous data out of training.</p>
+          <p>Designed the post-training plan with reference to the financial reasoning model <a href="https://arxiv.org/abs/2503.16252">Fin-R1</a> and the <a href="https://arxiv.org/abs/2501.15383">Qwen2.5-1M technical report</a>. Used SFT to learn reasoning and output patterns from examples, then applied GRPO reinforcement-learning fine-tuning with three reward types covering compliance, format completeness, and logical consistency, aiming to improve rule application and generalization.</p>
+          <p>Built a six-dimensional evaluation framework focused on data formats and numerical results. Iterated the data and model approach through error attribution, ultimately improving task accuracy to 85%+.</p>
+        </li>
+        <li class="career-project" id="rongcheng-table-retrieval"><h4>Heterogeneous-table retrieval evaluation</h4>
+          <p>Used controlled experiments and improved Python data-processing algorithms for heterogeneous-table retrieval; iteratively tested prompt hypotheses and delivered six evaluation reports.</p>
+        </li>
+        <li class="career-project" id="rongcheng-deployment-preparation"><h4>Resource preparation for local LLM deployment</h4>
+          <p>Researched resource and server requirements for local LLM deployment, compared market quotations, and supported server procurement negotiations.</p>
+        </li>
       </ul>
     </div>
     <div class="section-text col-right experience-item">
       <h3>HAKUHODO · Shanghai Hakuhodo Advertising</h3>
       <div class="row subsection"><div class="emph col">Data Marketing Planning Intern</div><div class="col-right light">Shanghai · Dec 2023 - May 2024</div></div>
       <div class="entry-tags"><span>Technical Operations</span><span>Market Insights</span><span>Data Marketing</span><span>AIGC</span></div>
-      <ul class="desc">
-        <li><b>Market insights:</b> Supported beauty-brand projects using Tmall TMIC and Douyin Ocean Engine for demand insights, audience profiling, competitor analysis, and word-cloud visualization.</li>
-        <li><b>AI intelligence and tools:</b> Tracked frontier AI developments, tested relevant products, documented usage experience, and shared findings across teams.</li>
-        <li><b>Data operations:</b> Built a selling-point keyword matrix across Tmall and Douyin, analyzing efficacy and ingredients to identify user priorities and product opportunities for Curel.</li>
-        <li><b>AIGC content:</b> Used ChatGPT and Midjourney to support ad-copy and sample-image generation and helped organize a marketing-domain corpus.</li>
+      <ul class="desc project-list">
+        <li class="career-project" id="hakuhodo-brand-research"><h4>Brand demand and audience insights</h4>
+          <p>Supported beauty-brand projects using Tmall TMIC and Douyin Ocean Engine for demand insights, audience profiling, competitor analysis, and word-cloud visualization.</p>
+        </li>
+        <li class="career-project" id="hakuhodo-ai-sharing"><h4>AI news and tool-sharing program</h4>
+          <p>Tracked frontier AI developments, tested relevant products, documented usage experience, and shared findings across teams.</p>
+        </li>
+        <li class="career-project" id="hakuhodo-curel-research"><h4>Curel selling-point and user-demand analysis</h4>
+          <p>Built a selling-point keyword matrix across Tmall and Douyin, analyzing efficacy and ingredients to identify user priorities and product opportunities for Curel.</p>
+        </li>
+        <li class="career-project" id="hakuhodo-aigc-content"><h4>Marketing AIGC content and corpus support</h4>
+          <p>Used ChatGPT and Midjourney to support ad-copy and sample-image generation and helped organize a marketing-domain corpus.</p>
+        </li>
       </ul>
     </div>
     <div class="section-text col-right experience-item compact-item">
       <h3>Kantar China · Qualitative Research Intern</h3>
       <div class="row subsection"><div class="emph col">User Research &amp; Strategy</div><div class="col-right light">Shanghai · Apr 2023 - Nov 2023</div></div>
       <div class="entry-tags"><span>User Research</span><span>Industry Research</span><span>Data Analysis</span><span>Supplier Liaison</span></div>
-      <ul class="desc">
-        <li><b>Business liaison:</b> Independently screened German suppliers, communicated requirements and pricing in English, and compared more than three bids.</li>
-        <li><b>Desk research:</b> Collected 50+ core industry reports for a single engagement, integrated multi-dimensional market data, used ChatGPT to explore consumer trends, and delivered three briefs.</li>
-        <li><b>Research execution:</b> Supported respondent screening, discussion-guide design, and 20+ online and offline interviews for Master Kong, Li Auto, Riot Games, and WeChat Channels.</li>
-        <li><b>Data analysis:</b> Structured hundreds of pages of transcripts with AI tools, modeled user-segment migration, created visualizations, and delivered four insight reports.</li>
+      <ul class="desc project-list">
+        <li class="career-project" id="kantar-supplier-research"><h4>German supplier research and bid comparison</h4>
+          <p>Independently screened German suppliers, communicated requirements and pricing in English, and compared more than three bids.</p>
+        </li>
+        <li class="career-project" id="kantar-industry-research"><h4>Consumer-trend and industry research</h4>
+          <p>Collected 50+ core industry reports for a single engagement, integrated multi-dimensional market data, used ChatGPT to explore consumer trends, and delivered three briefs.</p>
+        </li>
+        <li class="career-project" id="kantar-user-interviews"><h4>Brand qualitative research and user interviews</h4>
+          <p>Supported respondent screening, discussion-guide design, and 20+ online and offline interviews for Master Kong, Li Auto, Riot Games, and WeChat Channels.</p>
+        </li>
+        <li class="career-project" id="kantar-transcript-analysis"><h4>Transcript structuring and user-segment migration analysis</h4>
+          <p>Structured hundreds of pages of transcripts with AI tools, modeled user-segment migration, created visualizations, and delivered four insight reports.</p>
+        </li>
       </ul>
     </div>
   </section>
@@ -139,43 +193,60 @@
       <h3>Jizhi Liu AI Open-Source Community</h3>
       <div class="row subsection"><div class="emph col">Co-Founder</div><div class="col-right light">Mar 2024 - Present</div></div>
       <div class="entry-tags"><span>Technical Operations</span><span>Content Growth</span><span>Analytics</span><span>Partnerships</span></div>
-      <ul class="desc">
-        <li><b>Channel and community operations:</b> Led WeChat, Zhihu, and Xiaohongshu operations for an account with 35,000+ followers and communities totaling 5,000+ members; the account was previously recognized among China's Top 30 AI media accounts.</li>
-        <li><b>Open-source ecosystem tracking and editorial planning:</b> Monitored frontier work in AI agents and embodied intelligence, including papers, GitHub projects, models, and developer-tool releases; selected paper explainers and technical topics based on technical value, community interest, and developer needs.</li>
-        <li><b>Content:</b> Authored 10+ articles with 60,000+ cumulative views; representative posts reached <a href="https://mp.weixin.qq.com/s/R7m80kUKxb2k_AQLjPF5NQ">16,000</a> and <a href="https://mp.weixin.qq.com/s/jMSw3ZjMWFb1CSlvLbwCTQ">6,000+ views</a>.</li>
-        <li><b>AI content workflow:</b> Decomposed the content lifecycle from topic selection to final draft and built an automated workflow in Coze; ran iterative prompt experiments based on user feedback to reduce formulaic AI writing and doubled drafting efficiency; decoupled the mature logic into standard AI Skills / Agents to lower maintenance and adoption costs.</li>
-        <li><b>Cross-platform collaboration workspace, in progress:</b> To address fragmented workflows and team handoffs across information collection, content production, and automated formatting, began integrating existing workflows and iterating on a one-stop mobile and web workspace intended to centralize task, content, and process management. The workspace remains under development and has not yet been formally delivered.</li>
-        <li><b>Technical event operations:</b> Organized the online "New Year AI Tea Party," owning promotion, sponsorship communication, speaker outreach, and livestream operations; generated 5,000+ views when the account had just passed 10,000 followers and converted 700+ users into private communities.</li>
-        <li><b>Analytics:</b> Used engagement data, community management, and audience tagging to analyze content performance and user preferences and iterate editorial strategy.</li>
-        <li><b>Partnerships:</b> Led business outreach and secured collaborations with InfoQ, AWS, and other technology organizations.</li>
+      <ul class="desc project-list">
+        <li class="career-project" id="jizhiliu-content-community"><h4>AI technical content and multi-channel community operations</h4>
+          <p>Led WeChat, Zhihu, and Xiaohongshu operations for an AI technical-content and developer community. Tracked papers, GitHub projects, models, and developer-tool releases in AI agents and embodied intelligence, selecting explainers and technical topics based on technical value, community interest, and developer needs.</p>
+          <p>Used engagement data, community management, and audience tagging to analyze article performance and user preferences and iterate editorial strategy. Authored 10+ articles with 60,000+ cumulative views; representative posts reached <a href="https://mp.weixin.qq.com/s/R7m80kUKxb2k_AQLjPF5NQ">16,000</a> and <a href="https://mp.weixin.qq.com/s/jMSw3ZjMWFb1CSlvLbwCTQ">6,000+ views</a>.</p>
+          <p>Operated an account with 35,000+ followers and communities totaling 5,000+ members; the account was previously recognized among China’s Top 30 AI media accounts.</p>
+        </li>
+        <li class="career-project" id="jizhiliu-content-workflow"><h4>AI content-production workflow</h4>
+          <p>Decomposed the content lifecycle from topic selection to final draft and built an automated workflow in Coze; ran iterative prompt experiments based on user feedback to reduce formulaic AI writing and doubled drafting efficiency; decoupled the mature logic into standard AI Skills / Agents to lower maintenance and adoption costs.</p>
+        </li>
+        <li class="career-project" id="jizhiliu-workspace"><h4>Mobile and web collaboration workspace, in progress</h4>
+          <p>To address fragmented workflows and team handoffs across information collection, content production, and automated formatting, began integrating existing workflows and iterating on a one-stop mobile and web workspace intended to centralize task, content, and process management. The workspace remains under development and has not yet been formally delivered.</p>
+        </li>
+        <li class="career-project" id="jizhiliu-ai-tea-party"><h4>New Year AI Tea Party</h4>
+          <p>Organized the online "New Year AI Tea Party," owning promotion, sponsorship communication, speaker outreach, and livestream operations; generated 5,000+ views when the account had just passed 10,000 followers and converted 700+ users into private communities.</p>
+        </li>
+        <li class="career-project" id="jizhiliu-partnerships"><h4>Technology partnerships</h4>
+          <p>Led business outreach and secured collaborations with InfoQ, AWS, and other technology organizations.</p>
+        </li>
       </ul>
     </div>
     <div class="section-text col-right experience-item">
       <h3>InternLM LLM Bootcamp</h3>
       <div class="row subsection"><div class="emph col">Outstanding Teaching Assistant</div><div class="col-right light">Apr 2024 - May 2024</div></div>
       <div class="entry-tags"><span>Developer Support</span><span>Community Operations</span><span>LLM Deployment</span><span>DeepSpeed</span><span>Workflow Automation</span></div>
-      <ul class="desc">
-        <li><b>Developer support:</b> Supported 3,000+ learners on model deployment, fine-tuning, and OOM issues. Reproduced GPU-memory constraints and coordinated technical troubleshooting, providing actionable solutions such as DeepSpeed ZeRO CPU Offload and reduced KV-cache allocation.</li>
-        <li><b>Completion automation:</b> Used Feishu tools and scripts to aggregate assignment status, verify course completion, and distribute certificates, supporting large-scale online interaction and reliable cohort completion.</li>
+      <ul class="desc project-list">
+        <li class="career-project" id="internlm-bootcamp-support"><h4>LLM bootcamp: developer support and cohort completion</h4>
+          <p>Supported 3,000+ learners on model deployment, fine-tuning, and OOM issues. Reproduced GPU-memory constraints and coordinated technical troubleshooting, providing actionable solutions such as DeepSpeed ZeRO CPU Offload and reduced KV-cache allocation.</p>
+          <p>Used Feishu tools and scripts to aggregate assignment status, verify course completion, and distribute certificates, supporting large-scale online interaction and reliable cohort completion.</p>
+        </li>
       </ul>
     </div>
     <div class="section-text col-right experience-item">
       <h3>Dream Workers Program · Social-Impact Venture</h3>
       <div class="row subsection"><div class="emph col">Co-Founder · Front-End &amp; IT Lead</div><div class="col-right light">Dec 2022 - Nov 2023 (last verified in source resume)</div></div>
       <div class="entry-tags"><span>Social Entrepreneurship</span><span>Social Innovation</span><span>Front-End Development</span><span>Git</span><span>Product Planning</span></div>
-      <ul class="desc">
-        <li><b>Venture mission:</b> Co-founded a public-interest initiative supporting children with Down syndrome and intellectual disabilities, promoting social care, equal treatment, and joyful development while exploring digital channels for broader impact.</li>
-        <li><b>Digital presence:</b> Led front-end and IT work, building and maintaining the <a href="https://www.dream-workers.cc/">organization website</a> with HTML, CSS, and JavaScript and using Git for both remote and local code backups.</li>
-        <li><b>Product roadmap:</b> Planned an online interactive-game mini program to raise public awareness of children with intellectual disabilities and increase the initiative's visibility. As of Nov 2023, this remained a planned initiative with no evidence of delivery.</li>
+      <ul class="desc project-list">
+        <li class="career-project" id="dreamworkers-website"><h4>Social-impact venture website</h4>
+          <p>Co-founded a public-interest initiative supporting children with Down syndrome and intellectual disabilities, promoting social care, equal treatment, and joyful development while exploring digital channels for broader impact.</p>
+          <p>Led front-end and IT work, building and maintaining the <a href="https://www.dream-workers.cc/">organization website</a> with HTML, CSS, and JavaScript and using Git for both remote and local code backups.</p>
+        </li>
+        <li class="career-project" id="dreamworkers-miniprogram"><h4>Social-impact game mini program, planned</h4>
+          <p>Planned an online interactive-game mini program to raise public awareness of children with intellectual disabilities and increase the initiative's visibility. As of Nov 2023, this remained a planned initiative with no evidence of delivery.</p>
+        </li>
       </ul>
     </div>
     <div class="section-text col-right experience-item">
       <h3>OpenMMLab MMPose</h3>
       <div class="row subsection"><div class="emph col">Open-Source Contributor · <a href="https://github.com/open-mmlab/mmpose/pull/2201">PR #2201</a></div><div class="col-right light">Mar 2023 - Apr 2023</div></div>
       <div class="entry-tags"><span>Git / GitHub</span><span>Pull Requests</span><span>Code Review</span><span>CI</span><span>Bilingual Documentation</span></div>
-      <ul class="desc">
-        <li><b>PR delivery:</b> Independently completed and drove the merge of a contribution to MMPose 1.x, adding a DeepFashion2 dataset class, training configuration, pretrained model, and training logs as a reusable training solution.</li>
-        <li><b>Open-source collaboration:</b> Responded to maintainer review by removing Chinese comments from configuration files, adding JSON-format training logs and the pretrained model, and syncing the <code>dev-1.x</code> branch for CI checks; authored Chinese and English Dataset Zoo instructions.</li>
+      <ul class="desc project-list">
+        <li class="career-project" id="mmpose-deepfashion2"><h4>DeepFashion2 dataset integration and open-source delivery</h4>
+          <p>Added DeepFashion2 support to MMPose 1.x, independently implementing the dataset class, training configuration, pretrained model, and logs; authored Chinese and English Dataset Zoo instructions to form a reusable training solution.</p>
+          <p>Responded to maintainer review by removing Chinese comments from configuration files, adding JSON-format training logs and the pretrained model, and syncing the <code>dev-1.x</code> branch for CI checks; drove the PR to merge.</p>
+        </li>
       </ul>
     </div>
   </section>
@@ -210,7 +281,7 @@
     <div class="section-text col-right project-item">
       <h3>Product-Impact Study of Hotel Self Check-In Kiosks · Shanghai Innovation Program</h3>
       <div class="row subsection"><div class="emph col">Project Lead</div><div class="col-right light">Apr 2022 - May 2023</div></div>
-      <div class="desc">Applied sentiment analysis and difference-in-differences to assess the impact of self-check-in kiosks on guest satisfaction and its mediating and moderating mechanisms. <a href="https://www.sciencedirect.com/science/article/pii/S0278431924001841">Published in the International Journal of Hospitality Management</a>.</div>
+      <div class="desc">Applied sentiment analysis and difference-in-differences to assess the impact of self-check-in kiosks on guest satisfaction and its mediating and moderating mechanisms. The paper <a href="https://www.sciencedirect.com/science/article/pii/S0278431924001841"><em>How does customer satisfaction change after hotels start using self-service kiosks?</em></a> was published in <em>International Journal of Hospitality Management</em> (JCR Q1; Chinese Academy of Sciences Q1 Top journal).</div>
     </div>
     <div class="section-text col-right project-item">
       <h3>Computer Application Competition · Garment Silhouette Recognition</h3>
@@ -222,9 +293,11 @@
       <div class="row subsection"><div class="emph col">Team Lead · First Prize</div><div class="col-right light">Feb 2023</div></div>
       <div class="entry-tags"><span>Small-Sample Forecasting</span><span>LSTM / BPNN</span><span>Clustering &amp; Classification</span><span>Mathematical Modeling</span><span>Technical Writing</span></div>
       <div class="desc role-summary">Led a Wordle data-analysis and mining project, owning team coordination, mathematical modeling, part of the programming, and paper writing.</div>
-      <ul class="desc">
-        <li><b>Small-sample forecasting:</b> Used a limited dataset of 300+ samples and LSTM to forecast daily player counts, then designed VL-LSTM to mitigate underfitting caused by scarce training data, achieving 98.9% model accuracy. Extracted features using linguistic knowledge and built a BP neural network to predict the share of players at each attempt count, achieving 93.3% accuracy.</li>
-        <li><b>Difficulty evaluation:</b> Combined mathematical modeling, grey relational analysis, and entropy weighting to construct objective and subjective difficulty variables; clustered puzzles by their statistical features with DBSCAN, then trained an SVM on the cluster patterns and coupled it with the forecasting model to evaluate daily puzzle difficulty.</li>
+      <ul class="desc project-list">
+        <li class="career-project" id="mcm-wordle-modeling"><h4>Wordle player forecasting and puzzle-difficulty evaluation</h4>
+          <p>Used a limited dataset of 300+ samples and LSTM to forecast daily player counts, then designed VL-LSTM to mitigate underfitting caused by scarce training data, achieving 98.9% model accuracy. Extracted features using linguistic knowledge and built a BP neural network to predict the share of players at each attempt count, achieving 93.3% accuracy.</p>
+          <p>Combined mathematical modeling, grey relational analysis, and entropy weighting to construct objective and subjective difficulty variables; clustered puzzles by their statistical features with DBSCAN, then trained an SVM on the cluster patterns and coupled it with the forecasting model to evaluate daily puzzle difficulty.</p>
+        </li>
       </ul>
     </div>
   </section>
@@ -244,9 +317,9 @@
     <h2 class="col">Skills</h2>
     <div class="section-text col-right skills-grid">
       <div><b>Product:</b> Discovery, user interviews, competitive analysis, PRDs, prototyping, product metrics, GTM support</div>
-      <div><b>AI:</b> AI voice interaction, ASR / TTS, agents / ReAct, AI skills, agent harnesses, long-running task state machines, RAG fundamentals, prompt engineering, model evaluation, n8n, Coze</div>
+      <div><b>AI:</b> AI voice interaction, ASR / TTS, agents / ReAct, AI skills, agent harnesses, long-running task state machines, RAG fundamentals, prompt engineering, model evaluation, SFT / GRPO post-training, n8n, Coze</div>
       <div><b>Engineering / Open Source:</b> Git / GitHub, pull requests / issues, Markdown, Linux, Python, DeepSpeed ZeRO, developer documentation</div>
-      <div><b>Data:</b> Python, SQL, MySQL, Tableau, SPSS, experiment design, data visualization</div>
+      <div><b>Data:</b> Python, SQL, MySQL, Tableau, SPSS, experiment design, data visualization, training-data synthesis and validation of formats and accounting rules</div>
       <div><b>Languages:</b> English (CET-6), Portuguese</div>
       <div><b>Training / Certifications:</b> Outstanding Participant and Teaching Assistant, InternLM LLM Bootcamp; DBA Junior Data Analyst; MARs Junior Market Research Analyst</div>
     </div>
@@ -257,7 +330,7 @@
     <div class="section-text col-right skills-grid">
       <div>National Scholarship · Shanghai Outstanding Graduate · Outstanding Undergraduate Thesis</div>
       <div>Mathematical Contest in Modeling First Prize · Provincial Second Prize in Computer Application Competition</div>
-      <div>International Journal of Hospitality Management publication · OpenMMLab MMPose open-source contribution</div>
+      <div>International Journal of Hospitality Management publication (JCR Q1; Chinese Academy of Sciences Q1 Top journal) · OpenMMLab MMPose open-source contribution</div>
     </div>
   </section>
 </main>
