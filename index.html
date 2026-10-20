@@ -69,7 +69,7 @@
       <ul class="desc project-list">
         <li class="career-project" id="intsig-geo-agent-harness"><h4>GEO 数字员工：全流程设计、长任务执行与报告交付</h4>
           <p>围绕 GEO 优化“前期调研—拆稿铺稿—效果检测”的业务链路，梳理“任务解析—多平台采集—AI 评估—报告交付”流程，将数据抓取、指标分析与报告生成封装为可调用的生产级 Skill。</p>
-          <p>针对跨 AI 助手批量采集单任务耗时 6–8 小时、长程运行易超时中断并从头重试、平台反爬限制及企微机器人消息阻塞无回应的问题，将连续流程拆分为 30 分钟粒度任务，设计状态机、任务分片、状态持久化、断点续跑、失败恢复与反爬等 Agent Harness 机制。</p>
+          <p>针对跨 AI 助手批量采集单任务耗时 10 小时以上、长程运行易超时中断并从头重试、平台反爬限制及企微机器人消息阻塞无回应的问题，将连续流程拆分为 30 分钟粒度任务，设计状态机、任务分片、状态持久化、断点续跑、失败恢复与反爬等 Agent Harness 机制。</p>
           <p>按确定性与语义不确定性划分执行环节：爬虫采集、状态机转移和定时触发由脚本实现，AI 仅承担需要语义解析的任务调度、语义理解与数据标注。围绕品牌提及率、首推率、品牌心智等 GEO 报告的交付要求，编写内容格式、主题设计与数据引用标准并由 <code>SKILL.md</code> 引用，在 <code>AGENTS.md</code> 中约束 Agent 角色、能力边界及自我介绍等行为。</p>
           <p>使长程任务稳定运行并完成结果交付，用户可在任务过程中随时提问、查询进展并接收关键节点的进度通知，改善长任务期间的交互体验。</p>
         </li>
@@ -93,8 +93,8 @@
         <li class="career-project" id="binglan-voice-evaluation"><h4>AI 客服对话体验评测与优化</h4>
           <p>面向 ASR—大模型—TTS 架构的 AI 客服与智能外呼产品，针对用户识别出机器人、回复不自然等问题，通过听取真实通话 Case，区分并归因 ASR 识别错误、模型推理延迟、回复话术及语气问题；定位语气词、表达方式和模型异常输出，通过替换词配置及后处理规则过滤模型输出，优化对话自然度与拟人化体验。</p>
         </li>
-        <li class="career-project" id="binglan-outbound-console"><h4>多租户外呼面板</h4>
-          <p>针对人工跨系统导入线索出错率高的痛点，借助 Codex 与 Figma MCP 独立完成外呼面板原型和 4 份 PRD，定义租户隔离、状态流转、延时发起等核心逻辑；上线后线索录入出错率降低约 75%，总耗时降低 60%，已推广至 3 个业务线。</p>
+        <li class="career-project" id="binglan-outbound-console"><h4>多租户外呼系统开发</h4>
+          <p>针对人工跨系统导入线索出错率高的痛点，参与多租户外呼系统开发，借助 Codex 与 Figma MCP 独立完成系统原型和 4 份 PRD，定义租户隔离、状态流转、延时发起等核心逻辑；上线后线索录入出错率降低约 75%，总耗时降低 60%，已推广至 3 个业务线。</p>
         </li>
         <li class="career-project" id="binglan-report-automation"><h4>业务报表自动化</h4>
           <p>拆解数据抓取与分析等高重复业务，通过 Vibe Coding 产出并迭代工具脚本，封装为可调用的 AI Skill 并接入团队 Agent，将人工报表处理由 1 小时以上压缩至 3 分钟。</p>
@@ -134,10 +134,11 @@
           <p>访谈挖掘财务审核痛点，独立完成支持 5 种发票的识别 Agent 从需求定义、产品规划、技术选型、界面设计到上线的全流程；基于 ReAct 设计工具调用逻辑，综合识别准确率达 90%+。</p>
         </li>
         <li class="career-project" id="rongcheng-balance-sheet-normalization"><h4>非标资产负债表标准化（后训练优化）</h4>
-          <p>在有限资源与私有化部署的硬性约束下，通过试验发现小尺寸模型难以掌握复杂标准化规则，尤其易误判会计科目的借贷方向，导致数值错误、表格结构不符合规范，任务准确率不足 10%。</p>
-          <p>针对上述典型难例设计合成样本，构建 11,000+ 条训练数据；对样本开展数据格式与会计规则逻辑校验，筛除不合格样本，防止错误数据进入训练。</p>
-          <p>参考金融推理模型 <a href="https://arxiv.org/abs/2503.16252">Fin-R1</a> 与 <a href="https://arxiv.org/abs/2501.15383">Qwen2.5-1M 技术报告</a>设计后训练方案：以 SFT 学习示例中的推理与输出模式，再以合规性、格式完备性、逻辑一致性 3 类奖励函数驱动 GRPO 强化学习微调，以提升规则运用与泛化能力为目标。</p>
-          <p>围绕数据格式与数值结果构建 6 维评测体系，结合错误归因迭代数据与模型方案，最终将任务准确率提升至 85%+。</p>
+          <p>在有限算力与私有化部署约束下，围绕非标科目余额表标准化开展模型选型与后训练实验。基线测试发现，小尺寸模型难以稳定执行复杂会计规则，尤其容易误判期初、期末余额的借贷方向，造成数值错误或输出结构不合规，项目级任务准确率不足 10%。</p>
+          <p>针对余额表结构差异和典型错误构建、校验 11,000+ 条训练数据；编写程序化评估脚本，从数据行列、字段结构、类型及单元格结果等角度检查模型输出并返回错误类型。实验同时发现，简单字段提取型余额表仅通过 Prompt 即可基本正确，因此将后训练资源集中在需要借贷方向判断和复杂规则推理的表型上。</p>
+          <p>初期使用 Qwen2.5-7B-Instruct 开展 LoRA SFT，但少量且混合多种业务结构的真实样本难以使模型充分掌握操作逻辑。参考金融推理模型 <a href="https://arxiv.org/abs/2503.16252">Fin-R1</a> 与 <a href="https://arxiv.org/abs/2501.15383">Qwen2.5-1M 技术报告</a>设计后训练方案，由此形成“SFT 推理与输出范式预热＋GRPO 强化微调”的方案：SFT 用经过审查的结构化推理样本教授任务分解和标准化步骤，GRPO 则通过可程序化验证的奖励继续优化格式合规性、逻辑一致性与数值准确性。</p>
+          <p>基于 ms-swift 实现训练与评测闭环，奖励函数覆盖输出标签、表格可解析性、表头及索引完整性和单元格准确性，并对涉及借贷方向判断的余额字段提高奖励权重。通过错误归因发现并修复数据切分过程中同名“方向”列丢失的问题，使强化微调由波动、不收敛转为稳定优化。</p>
+          <p>结合程序化评测与错误归因持续迭代数据、提示词及训练方案，最终将项目级任务准确率由不足 10% 提升至 85%+。在受控的虚拟独立测试中，模型还在多类余额表上取得接近或达到单元格完全正确的结果；该结果作为方案有效性验证，不等同于生产环境整体准确率。</p>
         </li>
         <li class="career-project" id="rongcheng-table-retrieval"><h4>多源异构表格检索评测</h4>
           <p>面向多源异构表格检索，采用控制变量法并改进 Python 数据处理算法，持续调优提示词、验证实验假设，输出 6 份评测报告。</p>
@@ -258,10 +259,17 @@
       <div class="row subsection"><div class="emph col">产品设计与原型开发 · Top 10</div><div class="col-right light">2026.05</div></div>
       <div class="desc">洞察职场人群的放松与情绪疗愈需求，设计“上传照片—像素化—填写留言与祝福—市场交换”的快乐记忆交换闭环；在 36 小时内接入图像生成 API，并通过 Vibe Coding 完成可玩的 Web 原型。围绕核心体验保留星空篝火、白噪音与祝福气泡，主动裁剪角色换装等非关键功能，项目进入 Top 10。</div>
     </div>
-    <div class="section-text col-right project-item">
-      <h3>民营医疗机构智能运营诊断</h3>
-      <div class="row subsection"><div class="emph col">项目负责人</div><div class="col-right light">2025.06 - 至今</div></div>
-      <div class="desc">深入企业访谈管理与业务人员，将运营痛点转化为技术解决方案；搭建基于 LLM 的业务评估体系与智能指标分析框架，探索非标经营问题的标准化诊断路径。</div>
+    <div class="section-text col-right project-item long-project" id="medical-aesthetics-diagnostic-agent">
+      <h3>医美 SaaS 经营绩效诊断智能体 · 硕士学位论文</h3>
+      <div class="row subsection"><div class="emph col">项目负责人 · 本地 MVP 已实现</div><div class="col-right light">2025.06 - 至今</div></div>
+      <div class="entry-tags"><span>LangGraph / StateGraph</span><span>多智能体协作</span><span>MiMo</span><span>SQL 安全</span><span>证据链</span></div>
+      <ul class="desc project-list">
+        <li class="career-project" id="medical-aesthetics-agent-workflow"><h4>受约束多智能体诊断工作流</h4>
+          <p>面向民营医美机构管理者的经营诊断需求，针对业务指标合理性与 SaaS 数据可计算性脱节的问题，设计“中心编排—角色执行—确定性工具校验—节点审核—人工兜底”的层级协作机制，并定义结构化输入输出契约、任务检查点和可追溯证据链。</p>
+          <p>基于 LangGraph StateGraph 开发包含 11 个节点和人工兜底机制的本地 MVP，接入 MiMo 完成主题解析、研究增强、评价框架生成和报告生成；实现评价框架、SQL 安全、数据工程和报告证据四类审核门禁，以及危险 SQL 阻断、参数化查询检查、SQLite 只读沙箱、任务保存与恢复、运行轨迹查看和 Markdown 报告导出。</p>
+          <p>在模型接口异常、超时或结构化输出失败时记录错误并回退至本地规则。截至 2026.04，原型尚未接入生产只读数据库、真实 RAG 知识库和终端用户评价，当前结果用于验证技术可行性，不作为产品应用效果证明。</p>
+        </li>
+      </ul>
     </div>
     <div class="section-text col-right project-item needs-detail">
       <h3>广州市 Y 公司数据管理能力成熟度评估</h3>
@@ -317,7 +325,7 @@
     <h2 class="col">专业能力</h2>
     <div class="section-text col-right skills-grid">
       <div><b>产品：</b>需求调研、用户访谈、竞品分析、PRD、原型、指标体系、GTM 支持</div>
-      <div><b>AI：</b>AI 语音交互、ASR / TTS、Agent / ReAct、AI Skill、Agent Harness、长任务状态机、RAG 基础认知、Prompt 工程、模型评测、SFT / GRPO 后训练、n8n、Coze</div>
+      <div><b>AI：</b>AI 语音交互、ASR / TTS、Agent / ReAct、AI Skill、Agent Harness、LangGraph / StateGraph、多智能体协作、长任务状态机、RAG 基础认知、Prompt 工程、模型评测、SFT / GRPO 后训练、n8n、Coze</div>
       <div><b>工程 / 开源：</b>Git / GitHub、Pull Request / Issue、Markdown、Linux、Python、DeepSpeed ZeRO、开发者文档</div>
       <div><b>数据：</b>Python、SQL、MySQL、Tableau、SPSS、实验设计与数据可视化、训练数据合成及格式与会计规则校验</div>
       <div><b>语言：</b>英语（CET-6）、葡萄牙语</div>
@@ -331,6 +339,15 @@
       <div>本科生国家奖学金 · 上海市优秀毕业生 · 优秀毕业论文</div>
       <div>美国大学生数学建模竞赛一等奖 · 计算机应用能力大赛省级二等奖</div>
       <div>International Journal of Hospitality Management 论文（JCR 一区、中科院一区 TOP 期刊） · OpenMMLab MMPose 开源贡献</div>
+    </div>
+  </section>
+  <section class="section row" id="gaming">
+    <h2 class="col">游戏经历</h2>
+    <div class="section-text col-right skills-grid">
+      <div id="gaming-honor-of-kings"><b>王者荣耀：</b>十年以上玩家。</div>
+      <div id="gaming-eggy-party"><b>蛋仔派对：</b>游戏体验。</div>
+      <div id="gaming-clash-of-critters"><b>塔塔冒险队：</b>微信小游戏体验。产品背景：海外版上线 4 个月，全球累计流水约 3.1 亿元人民币（<a href="https://www.taptap.cn/moment/851770671959638343">公开估算</a>）。</div>
+      <div id="gaming-sunflower-defense"><b>保卫向日葵：</b>休闲策略塔防手游体验。产品背景：曾位列微信小游戏畅销榜第 7 名（<a href="https://www.36kr.com/p/3094931973093764">DataEye 报道</a>）。</div>
     </div>
   </section>
 </main>

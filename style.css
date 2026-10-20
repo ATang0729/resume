@@ -311,6 +311,8 @@ ul.project-list { list-style: none; padding-left: 0; }
   ul.desc { margin-top: 1.5mm; padding-left: 4mm; }
   .desc li { margin-bottom: .8mm; }
   .experience-item, .project-item { break-inside: avoid; page-break-inside: avoid; }
+  #gaming { break-inside: avoid; page-break-inside: avoid; }
+  .project-item.long-project, .project-item.long-project .career-project { break-inside: auto; page-break-inside: auto; }
   .experience-item:has(.project-list) { break-inside: auto; page-break-inside: auto; }
   .experience-item h3, .experience-item .subsection, .experience-item .entry-tags, .experience-item .role-summary { break-after: avoid; page-break-after: avoid; }
   ul.project-list { padding-left: 0; }
